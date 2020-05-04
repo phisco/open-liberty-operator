@@ -22,6 +22,7 @@ Appropriate cluster roles and bindings are required to watch another namespace, 
 The architecture of the Open Liberty Operator follows the basic controller pattern:  the Operator container with the controller is deployed into a Pod and listens for incoming resources with `Kind: OpenLibertyApplication`. Creating an `OpenLibertyApplication` custom resource (CR) triggers the Open Liberty Operator to create, update or delete Kubernetes resources needed by the application to run on your cluster.
 
 In addition, Open Liberty Operator makes it easy to perform link:++#day-2-operations++[Day-2 operations] on an Open Liberty server running inside a Pod as part of an `OpenLibertyApplication` instance:
+
 * Gather server traces using resource `Kind: OpenLibertyTrace`
 * Generate server dumps using resource `Kind: OpenLibertyDump`
 
